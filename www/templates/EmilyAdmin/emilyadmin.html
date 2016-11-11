@@ -1,0 +1,22 @@
+﻿<ion-view view-title="Products" >
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-plus-circled" ng-click="fnGo()">
+        </button>
+         <button class="button button-icon ion-arrow-return-right" ng-click="fnAddView()">
+       </button>
+    </ion-nav-buttons>
+    <ion-content ng-init="getProductList()">
+        <ion-list>
+            <ion-item ng-repeat="product in products">
+                {{product.productname}}
+                
+                <ion-option-button class="button-positive">
+                    Edit
+                </ion-option-button>
+                <ion-option-button class="button-assertive" ng-click="fnDelete(product.productid)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

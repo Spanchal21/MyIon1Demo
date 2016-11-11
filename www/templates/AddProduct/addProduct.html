@@ -1,0 +1,25 @@
+<ion-view view-title="add Product" class="common-box">
+    <ion-content class="view has-header">
+        <br/>
+        <br/>
+        <div class="list padding">
+            <form name="ProductAddForm" ng-submit="fnAddProduct(ProductAddForm,val)" class="form" novalidate>
+                <label class="item item-input">
+                    <input type="text" placeholder="Product Name" ng-model="val.productname" required>
+                </label>
+                <label class="item item-input">
+                    <input type="number" placeholder="Carate Quentity" ng-model="val.productpercaratqty" required>
+                </label>
+                <label class="item item-input">
+                    <input type="number" placeholder="Purchase price" ng-model="val.productpurchaseprice" required>
+                </label>
+                <label class="item item-input">
+                    <input type="number" placeholder="Sales Price" ng-model="val.productsaleprice" required>
+                </label>
+                <div class="btn-box">
+                    <button type="submit" class="button button-full button-positive">Save</button>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

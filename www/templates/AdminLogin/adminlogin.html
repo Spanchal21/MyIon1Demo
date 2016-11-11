@@ -1,0 +1,20 @@
+<ion-view title="Admin Login" hide-nav-bar="true">
+    <ion-content class="view login-page">
+        <div class="custom-login-form">
+            <form name="Loginform" ng-submit="fnLogin(Loginform,val)" novalidate>
+                <div class="form-box">
+                    <label class="item item-input" ng-class="{'has-error-lr': Loginform.Uname.$invalid && Loginform.$submitted, 'valid-lr' : Loginform.Uname.$valid && Loginform.$submitted}">
+                        <input type="text" name="Uname" placeholder="Username" ng-model="val.Uname" required>
+                    </label>
+                    <label class="item item-input" ng-class="{'has-error-lr': Loginform.Pword.$invalid && Loginform.$submitted, 'valid-lr' : Loginform.Pword.$valid && Loginform.$submitted}">
+                        <input type="password" name="Pword" placeholder="Password" ng-model="val.Pword" required>
+                    </label>
+                </div>
+                <div class="btn-box">
+                    <button class="button" type="submit">Login</button>
+                </div>
+            </form>
+            <br/>
+        </div>
+    </ion-content>
+</ion-view>
